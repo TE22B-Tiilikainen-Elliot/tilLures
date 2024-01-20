@@ -1,0 +1,54 @@
+{
+    "products": [
+        {
+            "name": "Gult Drag",
+            "price": 100,
+            "image": "unnamed1.jpg"
+        },
+        {
+            "name": "Rött Drag",
+            "price": 100,
+            "image": "unnamed2.jpg"
+        },
+        {
+            "name": "Guld Drag",
+            "price": 100,
+            "image": "unnamed3.jpg"
+        },
+        {
+            "name": "Blått Drag",
+            "price": 100,
+            "image": "unnamed4.jpg"
+        },
+        {
+            "name": "Brunt Drag",
+            "price": 100,
+            "image": "unnamed5.jpg"
+        },
+        {
+            "name": "morot",
+            "price": 100,
+            "image": "Carrot.jpg"
+        },
+        {
+            "name": "banan",
+            "price": 10,
+            "image": "Banana.jpg"
+        },
+        {
+            "name": "äpple",
+            "price": 5,
+            "image": "apple.jpg"
+        },
+        {
+            "name": "melon",
+            "price": 900,
+            "image": "melon.jpeg"
+        },
+        {
+            "name": "åsna",
+            "price": 38000,
+            "image": "donkey.jpg"
+        }
+    ]
+}
