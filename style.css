@@ -3,40 +3,39 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:ivory
 }
 header{
-    display: flex;
     width: 100%;
-    height: 80px;
+    background-image: url(Images/HeaderBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: burlywood;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 16px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-  }
-  .fa:hover {
-    opacity: 0.7;
-  }
-  .fa-instagram {
-    background: #125688;
+#headerContent{
+    width: 100%;
+    margin: calc(0.1rem + 2vw);
+    border-radius: calc(0.1rem + 1vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(40, 131, 170, 70%);
+    backdrop-filter: blur(10px);
     color: white;
-  }
-  .fa-tradera {
-    background: #55ACEE;
-    color: white;
-  }
-#productContainer
-{
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
+    font-size: calc(0.1rem + 2vw);
+    padding: 0px 10px 0px 10px;
 }
+#mediaButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#headerIcons{
+    width: calc(1rem + 5vw);
+}
+
+
 #product
 {
     background-color: white;
