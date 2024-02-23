@@ -23,7 +23,8 @@ header {
   background-color: rgba(40, 131, 170, 70%);
   backdrop-filter: blur(10px);
   color: white;
-  font-size: calc(0.1rem + 2vw);
+  font-size: calc(0.5rem + 1vw);
+  font-family: "Julius Sans One", sans-serif;
   padding: 0px 10px 0px 10px;
 }
 #mediaButtons {
@@ -35,7 +36,7 @@ header {
   width: calc(1rem + 5vw);
 }
 #productContainer {
-  width: 90vw;
+  width: 70vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -72,8 +73,12 @@ header {
   border: none;
   border-radius: 5px;
 }
-.purchaseButton:hover{
+.purchaseButton:hover, #headerIcons:hover{
     opacity: 0.6;
+}
+#image:hover{
+  opacity: 0.3;
+  border: gray solid 1px;
 }
 
 /* Ipad CSS */
@@ -89,6 +94,6 @@ header {
 
 @media (min-width: 1024px) {
     #product {
-      width: calc(20% - 40px);
+      width: calc(25% - 40px);
     }
   }
