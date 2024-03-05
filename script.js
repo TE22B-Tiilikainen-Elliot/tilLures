@@ -4,6 +4,7 @@ var products = [];
 var shoppingList = [];
 
 function addToCart(i) {
+  shoppingList = JSON.parse(localStorage.getItem("shoppingList"));
   shoppingList.push(products[i.id]);
   localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
 }
@@ -103,7 +104,7 @@ function loadShoppingCart() {
   });
 }
 
-if (window.location.pathname === "/index.html") {
+if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
   fetch("./products.json")
     .then((response) => response.json())
     .then((json) => {
