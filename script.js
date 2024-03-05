@@ -4,12 +4,12 @@ var products = [];
 var shoppingList = [];
 
 function addToCart(i) {
-    shoppingList.push(products[i.id])
-    localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+  shoppingList.push(products[i.id]);
+  localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
 }
 
 function removeFromCart(i) {
-  shoppingList = JSON.parse(localStorage.getItem("shoppingList"))
+  shoppingList = JSON.parse(localStorage.getItem("shoppingList"));
   shoppingList.splice(i.id, 1);
   localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
   loadShoppingCart();
@@ -32,12 +32,13 @@ function loadProducts() {
     productbutton.id = buttonid;
     productbutton.className = "purchaseButton";
     productbutton.addEventListener("click", function () {
-        addToCart(productbutton);
+      addToCart(productbutton);
     });
 
     productname.innerHTML = productitem.name;
     productprice.innerHTML = productitem.price + "kr";
     productimage.src = "productImages/" + productitem.image;
+    productimage.alt = productitem.alt;
     productbutton.innerHTML = "Köp";
 
     var namePrice = document.createElement("div");
@@ -60,7 +61,7 @@ function loadProducts() {
 function loadShoppingCart() {
   shoppingCartList.innerHTML = "";
   var buttonid = 0;
-  var cartitems = JSON.parse(localStorage.getItem("shoppingList"))
+  var cartitems = JSON.parse(localStorage.getItem("shoppingList"));
   cartitems.forEach((productitem) => {
     const product = document.createElement("div");
     product.id = "product";
@@ -76,12 +77,13 @@ function loadShoppingCart() {
     productbutton.id = buttonid;
     productbutton.className = "purchaseButton";
     productbutton.addEventListener("click", function () {
-        removeFromCart(productbutton);
+      removeFromCart(productbutton);
     });
 
     productname.innerHTML = productitem.name;
     productprice.innerHTML = productitem.price + "kr";
     productimage.src = "productImages/" + productitem.image;
+    productimage.alt = productitem.alt;
     productbutton.innerHTML = "Ta Bort";
 
     var namePrice = document.createElement("div");
@@ -101,12 +103,15 @@ function loadShoppingCart() {
   });
 }
 
+if (window.location.pathname === "/index.html") {
+  fetch("./products.json")
+    .then((response) => response.json())
+    .then((json) => {
+      products = json.products;
+      loadProducts();
+    });
+}
 
-fetch("./products.json")
-  .then((response) => response.json())
-  .then((json) => {
-    products = json.products;
-    loadProducts();
-  });
-
-document.onload = loadShoppingCart();
+if(window.location.pathname === "/cart.html"){
+  document.onload = loadShoppingCart();
+}

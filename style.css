@@ -6,7 +6,7 @@ body {
 }
 header {
   width: 100%;
-  background-image: url(Images/HeaderBackground.png);
+  background-image: url(Images/HeaderBackground.webp);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -68,7 +68,7 @@ header {
   align-items: center;
 }
 #price {
-  color: gray;
+  color: slategray;
   position: relative;
   bottom: 5px;
 }

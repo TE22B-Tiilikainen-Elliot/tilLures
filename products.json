@@ -3,52 +3,62 @@
         {
             "name": "Gult Drag",
             "price": 100,
-            "image": "unnamed1.jpg"
+            "image": "unnamed1.webp",
+            "alt": "Gult Drag"
         },
         {
             "name": "Rött Drag",
             "price": 100,
-            "image": "unnamed2.jpg"
+            "image": "unnamed2.webp",
+            "alt": "Rött Drag"
         },
         {
             "name": "Guld Drag",
             "price": 100,
-            "image": "unnamed3.jpg"
+            "image": "unnamed3.webp",
+            "alt": "Guld Drag"
         },
         {
             "name": "Blått Drag",
             "price": 100,
-            "image": "unnamed4.jpg"
+            "image": "unnamed4.webp",
+            "alt": "Blått Drag"
         },
         {
             "name": "Brunt Drag",
             "price": 100,
-            "image": "unnamed5.jpg"
+            "image": "unnamed5.webp",
+            "alt": "Brunt Drag"
         },
         {
             "name": "morot",
             "price": 100,
-            "image": "Carrot.jpg"
+            "image": "Carrot.webp",
+            "alt": "morot"
         },
         {
             "name": "banan",
             "price": 10,
-            "image": "Banana.jpg"
+            "image": "Banana.webp",
+            "alt": "banan"
         },
         {
             "name": "äpple",
             "price": 5,
-            "image": "apple.jpg"
+            "image": "apple.webp",
+            "alt": "äpple"
         },
         {
             "name": "melon",
             "price": 900,
-            "image": "melon.jpeg"
+            "image": "melon.webp",
+            "alt": "melon"
         },
         {
             "name": "åsna",
             "price": 38000,
-            "image": "donkey.jpg"
+            "image": "donkey.webp",
+            "alt": "åsna"
         }
     ]
 }
