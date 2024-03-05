@@ -41,6 +41,12 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
 }
+#ShoppingCartContainer {
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 #product {
   height: 250px;
   width: 100%;
@@ -67,8 +73,8 @@ header {
   bottom: 5px;
 }
 .purchaseButton {
-  height: 30px;
-  width: 40px;
+  height: 40px;
+  width: 60px;
   background-color: lightblue;
   border: none;
   border-radius: 5px;
