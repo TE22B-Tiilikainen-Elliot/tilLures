@@ -63,6 +63,7 @@ function loadShoppingCart() {
   shoppingCartList.innerHTML = "";
   var buttonid = 0;
   var cartitems = JSON.parse(localStorage.getItem("shoppingList"));
+  console.log(cartitems)
   cartitems.forEach((productitem) => {
     const product = document.createElement("div");
     product.id = "product";
