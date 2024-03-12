@@ -17,8 +17,10 @@ function removeFromCart(i) {
 }
 
 function loadProducts() {
+  console.log("2")
   var buttonid = 0;
   products.forEach((productitem) => {
+    console.log(productitem)
     const product = document.createElement("div");
     product.id = "product";
 
@@ -106,10 +108,12 @@ function loadShoppingCart() {
 }
 
 if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
+  console.log("1")
   fetch("./products.json")
     .then((response) => response.json())
     .then((json) => {
       products = json.products;
+      console.log(products)
       loadProducts();
     });
 }
