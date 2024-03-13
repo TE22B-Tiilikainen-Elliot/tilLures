@@ -4,7 +4,7 @@ var products = [];
 var shoppingList = [];
 
 function addToCart(i) {
-  shoppingList = JSON.parse(localStorage.getItem("shoppingList"));
+  let shoppingList = JSON.parse(localStorage.getItem("shoppingList")) || [];
   shoppingList.push(products[i.id]);
   localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
 }
@@ -17,10 +17,8 @@ function removeFromCart(i) {
 }
 
 function loadProducts() {
-  console.log("2")
   var buttonid = 0;
   products.forEach((productitem) => {
-    console.log(productitem)
     const product = document.createElement("div");
     product.id = "product";
 
@@ -107,17 +105,13 @@ function loadShoppingCart() {
   });
 }
 
-if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
-  console.log("1")
-  fetch("./products.json")
-    .then((response) => response.json())
-    .then((json) => {
-      products = json.products;
-      console.log(products)
-      loadProducts();
-    });
-}
 
-if(window.location.pathname === "/cart.html"){
-  document.onload = loadShoppingCart();
-}
+fetch("./products.json")
+  .then((response) => response.json())
+  .then((json) => {
+    products = json.products;
+    loadProducts();
+  });
+
+
+document.onload = loadShoppingCart();
